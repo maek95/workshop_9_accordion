@@ -35,7 +35,7 @@ dataPromise.then( (dataArrayOfObjects) => {
     divTitle.setAttribute("class", "title");
     if ( i % 2 == 0) {
       /* divTitle.style.backgroundColor = "rgb(192, 192, 192)"; */
-      divTitle.setAttribute("class", "titleEven");
+      divTitle.setAttribute("class", "title titleEven");
     }
     /* divTitle.setAttribute("id", `section${i}`); */ // behöver inte?
     divTitle.addEventListener("click", toggleFunction);
