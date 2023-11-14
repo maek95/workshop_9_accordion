@@ -36,10 +36,13 @@ p {
 
 .title:hover {
   background-color: white;
+  cursor: pointer;
 }
 
 .titleEven:hover {
   background-color: white;
+  cursor: pointer;
+
 }
 
 .description {
