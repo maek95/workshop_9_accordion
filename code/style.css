@@ -1,4 +1,84 @@
+* {
+  margin: 0;
+  border: 0;
+}
+
 html {
   background: #f2f1f4;
   color: #19171c;
 }
+
+p {
+  padding: 10px;
+}
+
+.body {
+  background-color: lightgrey;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  height: 50px;
+  border: 0.1px solid darkgrey;
+}
+
+.titleEven {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  height: 50px;
+  border: 0.1px solid darkgrey;
+
+  background-color: rgb(192, 192, 192);
+}
+
+.title:hover {
+  background-color: white;
+}
+
+.titleEven:hover {
+  background-color: white;
+}
+
+.description {
+ /*  display: none; */
+  max-height: 0;
+  overflow: hidden; 
+/*   visibility: hidden; */
+/*   opacity: 0; */
+  transition: all 0.5s ease;
+
+  /* transition doesnt work when returning to max-height: 0??? */
+}
+
+.active + .description {
+  /* display: block; */
+  background-color: white;
+  max-height: 1000px;
+  /* visibility: visible; */
+ /*  opacity: 1;  */
+
+  transition: all 0.5s ease;
+  /* transition: opacity 0.5s ease, visibility 0.5s ease; */
+}
+
+.menuIconClass {
+  transform: rotate(0deg);
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  /* transition-property: transform; */
+}
+
+.active .menuIconClass {
+  transform: rotate(180deg);
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  /* transition-property: transform; */ 
+}
+
+
+
