@@ -1,15 +1,16 @@
-
 // Selects and HTML element, and calls a function which will be executed when the element is clicked.
-const section1Element = document.getElementById("sectionOne");
+/* const section1Element = document.getElementById("sectionOne");
 section1Element.addEventListener("click", toggleFunction);
+
 
 const section2Element = document.getElementById("sectionTwo");
 section2Element.addEventListener("click", toggleFunction);
 
 const section3Element = document.getElementById("sectionThree");
 section3Element.addEventListener("click", toggleFunction); 
+ */
 
-
+const menuIconElement = document.getElementById("menuIconId");
 const accordionElement = document.getElementById("accordion");
 
 // ----- fetch
@@ -22,7 +23,6 @@ const dataPromise = responsePromise.then ( (response) => {
   return response.json(); // 
 } );
 
-const menuIconElement = document.getElementById("menuIconId");
 // i then har du riktiga javascript-datan...
 dataPromise.then( (dataArrayOfObjects) => {
 
@@ -30,6 +30,7 @@ dataPromise.then( (dataArrayOfObjects) => {
    /*  console.log(dataArrayOfObjects[i]); */
     const clone_menuIconElement = menuIconElement.cloneNode(true);
     clone_menuIconElement.setAttribute("class", "menuIconClass");
+    clone_menuIconElement.style.display = "block"; // it is display none originally... (#menuIconId)
 
     const divTitle = document.createElement("div");
     divTitle.setAttribute("class", "title");
@@ -41,7 +42,6 @@ dataPromise.then( (dataArrayOfObjects) => {
     divTitle.addEventListener("click", toggleFunction);
     divTitle.innerHTML = dataArrayOfObjects[i].title;
     divTitle.appendChild(clone_menuIconElement); 
-
 
     accordionElement.appendChild(divTitle);
     console.log("title:", dataArrayOfObjects[i].title);
@@ -66,7 +66,5 @@ function toggleFunction(e) {
 
   console.log("hej");
   console.log(section1Element.classList);
-
-  
 }
 

@@ -12,6 +12,10 @@ p {
   padding: 10px;
 }
 
+h1 {
+  padding: 10px;
+}
+
 .body {
   background-color: lightgrey;
 }
@@ -54,6 +58,10 @@ p {
   transition: all 0.5s ease;
   /* transition: opacity 0.5s ease, visibility 0.5s ease; */
 }
+
+#menuIconId {
+  display: none;
+} 
 
 .menuIconClass {
   transform: rotate(0deg);
